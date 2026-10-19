@@ -1,272 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#080d18">
-
     <title>Jestin Concepcion | Engineering Portfolio</title>
-
-    <link rel="stylesheet" href="style.css?v=2"></head>
-
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
 <body>
-
-    <!-- NAVIGATION HEADER -->
+    <!-- NAVIGATION -->
     <header>
-        <a class="brand" href="#drive">
-            JC<span>.</span>
-        </a>
-
-        <nav>
+        <a class="brand" href="#drive">JC<span>.</span></a>
+        <nav aria-label="Main navigation">
             <a href="#about">ABOUT</a>
             <a href="#projects">PROJECTS</a>
             <a href="#experience">EXPERIENCE</a>
             <a href="#contact">CONTACT</a>
         </nav>
-
-     
-        <a
-            class="resume"
-            href="https://docs.google.com/document/d/1_fGAcaG-Rj20wQx2DhsCV5er49JLk9wd/edit"
-            target="_blank"
-            rel="noopener noreferrer"
-            id="resumeLink">
-            RÉSUMÉ ↗
-        </a>
-
+        <a class="resume"
+           href="https://docs.google.com/document/d/1_fGAcaG-Rj20wQx2DhsCV5er49JLk9wd/edit"
+           target="_blank" rel="noopener noreferrer" id="resumeLink">RÉSUMÉ ↗</a>
     </header>
 
     <main>
-
-        <!-- HOMEPAGE / ANIMATED ROAD -->
+        <!-- ANIMATED HOMEPAGE -->
         <section id="drive" class="drive">
             <div class="stage">
-
-                <canvas
-                    id="scene"
-                    aria-label="Animated opposing red and white light trails following separate lanes of a winding mountain road">
-                </canvas>
-
+                <canvas id="scene" aria-label="Animated red and white light trails moving in opposite directions on a mountain road"></canvas>
                 <div class="hero">
-                    <p class="eyebrow">
-                        ELECTRICAL ENGINEERING / UNIVERSITY OF MICHIGAN
-                    </p>
-
-                    <h1>
-                        JESTIN<br>
-                        <em>CONCEPCION.</em>
-                    </h1>
-
-                    <p>
-                        Embedded systems · Automotive technology<br>
-                        Semiconductors · Optics
-                    </p>
-
-                    <a href="#projects" class="cta">
-                        EXPLORE PROJECTS ↗
-                    </a>
+                    <p class="eyebrow">ELECTRICAL ENGINEERING / UNIVERSITY OF MICHIGAN</p>
+                    <h1>JESTIN<br><em>CONCEPCION.</em></h1>
+                    <p>Embedded systems · Automotive technology<br>Semiconductors · Optics</p>
+                    <a href="#projects" class="cta">EXPLORE PROJECTS ↗</a>
                 </div>
-
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- ABOUT -->
         <section id="about" class="content">
             <div class="inner">
-
                 <span class="eyebrow">01 / ABOUT</span>
-
-                <h2>
-                    ENGINEERING <b>IN MOTION.</b>
-                </h2>
-
-                <p>
-                    I'm Jestin Concepcion, an Electrical Engineering student
-                    at the University of Michigan College of Engineering.
-                    Through coursework and technical projects, I have gained experience in embedded systems, 
-                    circuit and PCB design, signal processing, control systems, semiconductors, electromagnetics,
-                    and optics, with a strong interest in automotive applications.
-                </p>
-
-                <p>
-                    Alongside my studies, I have professional experience
-                    in real estate, mortgage lending, and tax preparation.
-                </p>
-
+                <h2>ENGINEERING <b>IN MOTION.</b></h2>
+                <p>I'm Jestin Concepcion, an Electrical Engineering student at the University of Michigan College of Engineering. Through coursework and technical projects, I have gained experience in embedded systems, circuit and PCB design, signal processing, control systems, semiconductors, electromagnetics, and optics, with a strong interest in automotive applications.</p>
+                <p>Alongside my studies, I have professional experience in real estate, mortgage lending, and tax preparation.</p>
             </div>
         </section>
 
-        
-<!-- PROJECTS SECTION -->
-<section id="projects" class="content alt">
-    <div class="inner">
-
-        <span class="eyebrow">02 / SELECTED WORK</span>
-
-        <h2>
-            ENGINEERING <b>PROJECTS.</b>
-        </h2>
-
-        <!-- PROJECT FILTERS -->
-        <div class="filters">
-            <button class="selected" data-filter="all">ALL</button>
-            <button data-filter="embedded">EMBEDDED</button>
-            <button data-filter="optics">OPTICS</button>
-            <button data-filter="automotive">AUTOMOTIVE</button>
-            <button data-filter="semiconductor">SEMICONDUCTORS</button>
-        </div>
-
-        <!-- PROJECT CARDS -->
-        <div class="cards">
-
-            <article data-tags="embedded"
-                     data-project="thermal"
-                     tabindex="0"
-                     role="button">
-
-                <span>01 / EMBEDDED SYSTEMS</span>
-                <h3>Thermal Occupancy Detection</h3>
-
-                <p>
-                    ESP32 doorway people-counting system using
-                    thermal sensing, sensor integration,
-                    and PCB design.
-                </p>
-
-                <div class="project-more">
-                    VIEW PROJECT ↗
+        <!-- PROJECTS -->
+        <section id="projects" class="content alt">
+            <div class="inner">
+                <span class="eyebrow">02 / SELECTED WORK</span>
+                <h2>ENGINEERING <b>PROJECTS.</b></h2>
+                <div class="filters" aria-label="Filter projects">
+                    <button class="selected" data-filter="all" type="button">ALL</button>
+                    <button data-filter="embedded" type="button">EMBEDDED</button>
+                    <button data-filter="optics" type="button">OPTICS</button>
+                    <button data-filter="automotive" type="button">AUTOMOTIVE</button>
+                    <button data-filter="semiconductor" type="button">SEMICONDUCTORS</button>
                 </div>
-            </article>
-
-            <article data-tags="semiconductor"
-                     data-project="solar"
-                     tabindex="0"
-                     role="button">
-
-                <span>02 / OPTOELECTRONICS</span>
-                <h3>Kesterite Solar Cell Research</h3>
-
-                <p>
-                    Study of photovoltaic device performance,
-                    open-circuit voltage deficits, and stability.
-                </p>
-
-                <div class="project-more">
-                    VIEW PROJECT ↗
+                <div class="cards">
+                    <article data-tags="embedded" data-project="thermal" tabindex="0" role="button" aria-label="View Thermal Occupancy Detection details">
+                        <span>01 / EMBEDDED SYSTEMS</span>
+                        <h3>Thermal Occupancy Detection</h3>
+                        <p>ESP32 doorway people-counting system using thermal sensing, sensor integration, and PCB design.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="semiconductor" data-project="solar" tabindex="0" role="button" aria-label="View Kesterite Solar Cell Research details">
+                        <span>02 / OPTOELECTRONICS</span>
+                        <h3>Kesterite Solar Cell Research</h3>
+                        <p>Study of photovoltaic device performance, open-circuit voltage deficits, and stability.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="optics" data-project="glove" tabindex="0" role="button" aria-label="View Optical Fiber Data Glove details">
+                        <span>03 / OPTICAL ENGINEERING</span>
+                        <h3>Optical Fiber Data Glove</h3>
+                        <p>Proposed wearable fiber-optic sensing system using light transmission and photodetection.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="automotive optics" data-project="headlight" tabindex="0" role="button" aria-label="View Adaptive Headlight System details">
+                        <span>04 / AUTOMOTIVE OPTICS</span>
+                        <h3>Adaptive Headlight System</h3>
+                        <p>Concept combining selective illumination and tunable optics for automotive lighting.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <article data-tags="optics"
-                     data-project="glove"
-                     tabindex="0"
-                     role="button">
+        <!-- PROJECT POP-UP -->
+        <dialog id="projectModal" class="project-modal" aria-labelledby="modalTitle">
+            <button type="button" class="modal-close" id="closeModal" aria-label="Close project details">&times;</button>
+            <div class="modal-content">
+                <span class="eyebrow" id="modalCategory"></span>
+                <h2 id="modalTitle"></h2>
+                <p class="modal-intro" id="modalIntro"></p>
+                <div class="modal-divider"></div>
+                <h3>PROJECT OVERVIEW</h3>
+                <p id="modalOverview"></p>
+                <h3>TECHNICAL DETAILS</h3>
+                <ul id="modalDetails"></ul>
+                <h3>TOOLS &amp; TECHNOLOGIES</h3>
+                <div class="modal-tags" id="modalTags"></div>
+            </div>
+        </dialog>
 
-                <span>03 / OPTICAL ENGINEERING</span>
-                <h3>Optical Fiber Data Glove</h3>
-
-                <p>
-                    Proposed wearable fiber-optic sensing system
-                    using light transmission and photodetection.
-                </p>
-
-                <div class="project-more">
-                    VIEW PROJECT ↗
+        <!-- EXPERIENCE -->
+        <section id="experience" class="content">
+            <div class="inner">
+                <span class="eyebrow">03 / EXPERIENCE</span>
+                <h2>PROFESSIONAL <b>BACKGROUND.</b></h2>
+                <div class="experience">
+                    <div><small>2020 — PRESENT</small><h3>Real Estate Agent</h3><p>Professional Real Estate of Michigan</p></div>
+                    <div><small>2018 — PRESENT</small><h3>Tax Preparer</h3><p>Tax Matters &amp; Practitioner, LC</p></div>
+                    <div><small>2022 — PRESENT</small><h3>Mortgage Loan Originator</h3><p>Superb Mortgage</p></div>
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <article data-tags="automotive optics"
-                     data-project="headlight"
-                     tabindex="0"
-                     role="button">
-
-                <span>04 / AUTOMOTIVE OPTICS</span>
-                <h3>Adaptive Headlight System</h3>
-
-                <p>
-                    Concept combining selective illumination
-                    and tunable optics for automotive lighting.
-                </p>
-
-                <div class="project-more">
-                    VIEW PROJECT ↗
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<!-- PROJECT POP-UP -->
-<dialog id="projectModal" class="project-modal"
-        aria-labelledby="modalTitle">
-
-    <button class="modal-close"
-            id="closeModal"
-            aria-label="Close project details">
-        &times;
-    </button>
-
-    <div class="modal-content">
-
-        <span class="eyebrow" id="modalCategory"></span>
-
-        <h2 id="modalTitle"></h2>
-
-        <p class="modal-intro" id="modalIntro"></p>
-
-        <div class="modal-divider"></div>
-
-        <h3>PROJECT OVERVIEW</h3>
-        <p id="modalOverview"></p>
-
-        <h3>TECHNICAL DETAILS</h3>
-        <ul id="modalDetails"></ul>
-
-        <h3>TOOLS & TECHNOLOGIES</h3>
-        <div class="modal-tags" id="modalTags"></div>
-
-    </div>
-</dialog>
-
-
-        <!-- CONTACT SECTION -->
+        <!-- CONTACT -->
         <section id="contact" class="content alt">
             <div class="inner">
-
                 <span class="eyebrow">04 / CONTACT</span>
-
-                <h2>
-                    LET'S <b>CONNECT.</b>
-                </h2>
-
-                <p>
-                    Interested in engineering opportunities,
-                    technical projects, or collaboration?
-                </p>
-
-                
-                <a
-                    class="cta"
-                    href="https://www.linkedin.com/in/jestin-concepcion-11b142268/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    LINKEDIN ↗
-                </a>
-
+                <h2>LET'S <b>CONNECT.</b></h2>
+                <p>Interested in engineering opportunities, technical projects, or collaboration?</p>
+                <a class="cta" href="https://www.linkedin.com/in/jestin-concepcion-11b142268/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
             </div>
         </section>
-
     </main>
-
-    <!-- FOOTER -->
-    <footer>
-        © <span id="year"></span> The End?
-    </footer>
-
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
-
+    <footer>© <span id="year"></span> The End?</footer>
+    <script src="script.js?v=4" defer></script>
 </body>
 </html>
