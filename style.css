@@ -1,6 +1,6 @@
 
 /* =========================================
-   GLOBAL COLORS AND SETTINGS
+   GLOBAL SETTINGS
    ========================================= */
 
 :root {
@@ -17,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 85px;
 }
 
 body {
@@ -33,11 +33,11 @@ a {
 }
 
 /* =========================================
-   HEADER
+   TOP NAVIGATION BAR
    ========================================= */
 
 header {
-    height: 70px;
+    height: 85px;
     position: fixed;
     z-index: 30;
     top: 0;
@@ -48,21 +48,21 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 5vw;
+    padding: 0 5%;
 
     background: linear-gradient(
-        #050913ed,
-        #05091375
+        #050913f5,
+        #050913e0
     );
 
-    border-bottom: 1px solid #ffffff19;
+    border-bottom: 1px solid #ffffff20;
     backdrop-filter: blur(12px);
 }
 
-/* Logo */
+/* JC Logo */
 
 .brand {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 900;
     position: relative;
     z-index: 2;
@@ -72,7 +72,7 @@ header {
     color: var(--red);
 }
 
-/* Center navigation links */
+/* Centered navigation */
 
 header nav {
     position: absolute;
@@ -86,13 +86,17 @@ header nav {
     gap: 20px;
 }
 
+/* Larger navigation text and clickable areas */
+
 header nav a {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 800;
     letter-spacing: 1.5px;
 
-    padding: 14px 12px;
+    padding: 16px 14px;
     white-space: nowrap;
+
+    border-radius: 5px;
 
     transition:
         color 0.2s ease,
@@ -104,18 +108,20 @@ header nav a:hover {
     background: rgba(255, 36, 77, 0.12);
 }
 
-/* Resume button */
+/* Larger résumé button */
 
 .resume {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 800;
     letter-spacing: 1.5px;
 
-    padding: 13px 20px;
+    padding: 15px 22px;
     border: 1px solid var(--red);
 
     position: relative;
     z-index: 2;
+
+    transition: background 0.2s ease;
 }
 
 .resume:hover {
@@ -123,7 +129,7 @@ header nav a:hover {
 }
 
 /* =========================================
-   ROAD ANIMATION SECTION
+   ANIMATED ROAD SECTION
    ========================================= */
 
 .drive {
@@ -145,7 +151,7 @@ header nav a:hover {
     display: block;
 }
 
-/* Dark overlay for text readability */
+/* Dark overlay */
 
 .stage::after {
     content: "";
@@ -176,8 +182,7 @@ header nav a:hover {
     position: absolute;
     z-index: 2;
 
-    /* Fixed distance below the header */
-    top: 110px;
+    top: 125px;
     left: 8%;
 
     max-width: 800px;
@@ -209,7 +214,7 @@ header nav a:hover {
     line-height: 1.8;
 }
 
-/* Explore projects button */
+/* Explore Projects button */
 
 .cta {
     display: inline-block;
@@ -231,7 +236,7 @@ header nav a:hover {
     background: #ff5474;
 }
 
-/* Optional animation HUD elements */
+/* Optional HUD */
 
 .drivehud {
     position: absolute;
@@ -261,7 +266,7 @@ header nav a:hover {
 }
 
 /* =========================================
-   PORTFOLIO CONTENT
+   PORTFOLIO SECTIONS
    ========================================= */
 
 .content {
@@ -399,9 +404,9 @@ footer {
    TABLET
    ========================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     header {
-        padding: 0 3vw;
+        padding: 0 3%;
     }
 
     header nav {
@@ -409,14 +414,18 @@ footer {
     }
 
     header nav a {
-        font-size: 11px;
-        padding: 12px 8px;
+        font-size: 13px;
+        padding: 14px 8px;
         letter-spacing: 1px;
     }
 
     .resume {
-        font-size: 11px;
-        padding: 11px 12px;
+        font-size: 12px;
+        padding: 12px 14px;
+    }
+
+    .brand {
+        font-size: 28px;
     }
 }
 
@@ -427,7 +436,7 @@ footer {
 @media (max-width: 700px) {
     header {
         height: 70px;
-        padding: 0 4vw;
+        padding: 0 4%;
     }
 
     .brand {
@@ -435,11 +444,11 @@ footer {
     }
 
     header nav {
-        left: auto;
-        right: 4%;
-        top: 50%;
-        transform: translateY(-50%);
+        position: static;
+        transform: none;
+
         gap: 2px;
+        margin-left: auto;
     }
 
     header nav a {
