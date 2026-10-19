@@ -1,29 +1,11 @@
-# Scroll-driven Supra racing portfolio
+# Performance Coupe Portfolio — Scroll-to-Enter Edition
 
-A complete static GitHub Pages portfolio with a procedural racing-game-style mountain road, a hand-drawn Supra-inspired SVG rear-view sports car, and red trails that are drawn only **behind** the car as you scroll. All visuals are generated locally with Canvas and SVG; there are no third-party image dependencies.
+A generic, unbranded high-performance coupe now **cuts in only after scrolling begins**. At the top of the page the road is empty. Around 5% into the scroll the car enters from the bottom-left and merges onto the road; then it drives into the distance. Red trails grow only once it starts traveling down the road.
 
-## Upload to GitHub
+## Install on GitHub Pages
+Upload `index.html`, `style.css`, and `script.js` to the **root** of your repository and commit them. These three files are all that is needed for the animated scene. Your other portfolio sections are preserved. No car image is required.
 
-1. Unzip this archive.
-2. Open https://github.com/concepcionjestin/jestinconcepcion
-3. In the repository root, upload/replace `index.html`, `style.css`, and `script.js`. Commit.
-4. Create `assets` if it doesn't exist by creating `assets/.gitkeep`, then upload `assets/supra.svg` into it. Keep the folder name exactly `assets`.
-5. In **Settings > Pages**, deploy from branch `main`, folder `/ (root)`.
-6. Visit https://concepcionjestin.github.io/jestinconcepcion/ after deployment.
-
-## Preview locally
-
-Open `index.html` in Chrome. The Canvas background and SVG asset work without any build process.
+The `assets` directory is optional and can hold your own `resume.pdf`.
 
 ## Customize
-
-- `style.css`: change `--red` and the homepage text styling.
-- `script.js`: edit `path(t)` for a different curve, and `.drive` height in CSS for animation duration.
-- `assets/supra.svg`: editable vector car artwork. This is a stylized Supra-inspired illustration, not an exact licensed 3D model.
-- Add your own `assets/resume.pdf` to activate the résumé link; until then it is a placeholder.
-- Replace project summaries with your final validated project results. No contact email was guessed.
-
-This is a 2D racing-game aesthetic, not a fully modeled 3D driving simulation. The car and trails move along the same programmatic road path. It supports reverse scrolling and mobile screens.
-
-
-UPDATED: The sports car is now drawn directly in script.js, so no separate SVG is needed. The bottom scroll prompt and GR Supra HUD were removed. The car travels along the road as you scroll and leaves progressive red light trails.
+In `script.js`, `progress<=.045` controls when the car first appears; `(progress-.045)/.15` controls how quickly it cuts in; `(progress-.16)/.84` controls its drive away. The animation is intentionally stylized Canvas 2D, not a photorealistic 3D render.
