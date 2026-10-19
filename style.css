@@ -99,14 +99,16 @@ nav a:hover {
     background:linear-gradient(90deg,#030712ad 0%,#03071245 40%,transparent 75%),linear-gradient(0deg,#04071285,transparent 25%)
 }
 
+
 .hero {
-    position:absolute;
-    z-index:2;
-    left:8%;
-    top:27%;
-    max-width:600px;
-    text-shadow:0 3px 25px #000
+    position: absolute;
+    z-index: 2;
+    left: 8%;
+    top: 110px;
+    max-width: 600px;
+    text-shadow: 0 3px 25px #000;
 }
+
 
 .eyebrow {
     color:#ff526e;
