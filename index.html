@@ -98,101 +98,138 @@
             </div>
         </section>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="content alt">
-            <div class="inner">
+        
+<!-- PROJECTS SECTION -->
+<section id="projects" class="content alt">
+    <div class="inner">
 
-                <span class="eyebrow">02 / SELECTED WORK</span>
+        <span class="eyebrow">02 / SELECTED WORK</span>
 
-                <h2>
-                    ENGINEERING <b>PROJECTS.</b>
-                </h2>
+        <h2>
+            ENGINEERING <b>PROJECTS.</b>
+        </h2>
 
-                <!-- PROJECT FILTER BUTTONS -->
-                <div class="filters">
-                    <button class="selected" data-filter="all">ALL</button>
-                    <button data-filter="embedded">EMBEDDED</button>
-                    <button data-filter="optics">OPTICS</button>
-                    <button data-filter="automotive">AUTOMOTIVE</button>
-                    <button data-filter="semiconductor">SEMICONDUCTORS</button>
+        <!-- PROJECT FILTERS -->
+        <div class="filters">
+            <button class="selected" data-filter="all">ALL</button>
+            <button data-filter="embedded">EMBEDDED</button>
+            <button data-filter="optics">OPTICS</button>
+            <button data-filter="automotive">AUTOMOTIVE</button>
+            <button data-filter="semiconductor">SEMICONDUCTORS</button>
+        </div>
+
+        <!-- PROJECT CARDS -->
+        <div class="cards">
+
+            <article data-tags="embedded"
+                     data-project="thermal"
+                     tabindex="0"
+                     role="button">
+
+                <span>01 / EMBEDDED SYSTEMS</span>
+                <h3>Thermal Occupancy Detection</h3>
+
+                <p>
+                    ESP32 doorway people-counting system using
+                    thermal sensing, sensor integration,
+                    and PCB design.
+                </p>
+
+                <div class="project-more">
+                    VIEW PROJECT ↗
                 </div>
+            </article>
 
-                <!-- PROJECT CARDS -->
-                <div class="cards">
+            <article data-tags="semiconductor"
+                     data-project="solar"
+                     tabindex="0"
+                     role="button">
 
-                    <article data-tags="embedded">
-                        <span>01 / EMBEDDED SYSTEMS</span>
-                        <h3>Thermal Occupancy Detection</h3>
-                        <p>
-                            ESP32 doorway people-counting system using thermal
-                            sensing, sensor integration, and PCB design.
-                        </p>
-                    </article>
+                <span>02 / OPTOELECTRONICS</span>
+                <h3>Kesterite Solar Cell Research</h3>
 
-                    <article data-tags="semiconductor">
-                        <span>02 / OPTOELECTRONICS</span>
-                        <h3>Kesterite Solar Cell Research</h3>
-                        <p>
-                            Study of photovoltaic device performance,
-                            open-circuit voltage deficits, and stability.
-                        </p>
-                    </article>
+                <p>
+                    Study of photovoltaic device performance,
+                    open-circuit voltage deficits, and stability.
+                </p>
 
-                    <article data-tags="optics">
-                        <span>03 / OPTICAL ENGINEERING</span>
-                        <h3>Optical Fiber Data Glove</h3>
-                        <p>
-                            Proposed wearable fiber-optic sensing system
-                            using light transmission and photodetection.
-                        </p>
-                    </article>
-
-                    <article data-tags="automotive optics">
-                        <span>04 / AUTOMOTIVE OPTICS</span>
-                        <h3>Adaptive Headlight System</h3>
-                        <p>
-                            Concept combining selective illumination and
-                            tunable optics for automotive lighting.
-                        </p>
-                    </article>
-
+                <div class="project-more">
+                    VIEW PROJECT ↗
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <!-- EXPERIENCE SECTION -->
-        <section id="experience" class="content">
-            <div class="inner">
+            <article data-tags="optics"
+                     data-project="glove"
+                     tabindex="0"
+                     role="button">
 
-                <span class="eyebrow">03 / EXPERIENCE</span>
+                <span>03 / OPTICAL ENGINEERING</span>
+                <h3>Optical Fiber Data Glove</h3>
 
-                <h2>
-                    PROFESSIONAL <b>BACKGROUND.</b>
-                </h2>
+                <p>
+                    Proposed wearable fiber-optic sensing system
+                    using light transmission and photodetection.
+                </p>
 
-                <div class="experience">
-
-                    <div>
-                        <small>2020 — PRESENT</small>
-                        <h3>Real Estate Agent</h3>
-                        <p>Professional Real Estate of Michigan</p>
-                    </div>
-
-                    <div>
-                        <small>2018 — PRESENT</small>
-                        <h3>Tax Preparer</h3>
-                        <p>Tax Matters &amp; Practitioner, LC</p>
-                    </div>
-
-                    <div>
-                        <small>2022 — PRESENT</small>
-                        <h3>Mortgage Loan Originator</h3>
-                        <p>Superb Mortgage</p>
-                    </div>
-
+                <div class="project-more">
+                    VIEW PROJECT ↗
                 </div>
-            </div>
-        </section>
+            </article>
+
+            <article data-tags="automotive optics"
+                     data-project="headlight"
+                     tabindex="0"
+                     role="button">
+
+                <span>04 / AUTOMOTIVE OPTICS</span>
+                <h3>Adaptive Headlight System</h3>
+
+                <p>
+                    Concept combining selective illumination
+                    and tunable optics for automotive lighting.
+                </p>
+
+                <div class="project-more">
+                    VIEW PROJECT ↗
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT POP-UP -->
+<dialog id="projectModal" class="project-modal"
+        aria-labelledby="modalTitle">
+
+    <button class="modal-close"
+            id="closeModal"
+            aria-label="Close project details">
+        &times;
+    </button>
+
+    <div class="modal-content">
+
+        <span class="eyebrow" id="modalCategory"></span>
+
+        <h2 id="modalTitle"></h2>
+
+        <p class="modal-intro" id="modalIntro"></p>
+
+        <div class="modal-divider"></div>
+
+        <h3>PROJECT OVERVIEW</h3>
+        <p id="modalOverview"></p>
+
+        <h3>TECHNICAL DETAILS</h3>
+        <ul id="modalDetails"></ul>
+
+        <h3>TOOLS & TECHNOLOGIES</h3>
+        <div class="modal-tags" id="modalTags"></div>
+
+    </div>
+</dialog>
+
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="content alt">
