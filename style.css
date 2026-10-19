@@ -1,5 +1,321 @@
-:root{color-scheme:dark;--red:#ff244d;--bg:#080d18;--ink:#f6f8ff;--muted:#a4afc3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}header{height:70px;position:fixed;z-index:30;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:linear-gradient(#050913ed,#05091375);border-bottom:1px solid #ffffff19;backdrop-filter:blur(12px)}a{color:inherit;text-decoration:none}.brand{font-size:28px;font-weight:900}.brand span,em,b{color:var(--red);font-style:normal}nav{display:flex;gap:25px}nav a,.resume{font-size:11px;letter-spacing:2px;font-weight:700}nav a:hover{color:var(--red)}.resume{border:1px solid var(--red);padding:10px 14px}.drive{height:420vh;position:relative}.stage{height:100vh;position:sticky;top:0;overflow:hidden;background:#07101d}#scene{width:100%;height:100%;display:block}.stage:after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,#030712ad 0%,#03071245 40%,transparent 75%),linear-gradient(0deg,#04071285,transparent 25%)}.hero{position:absolute;z-index:2;left:8%;top:27%;max-width:600px;text-shadow:0 3px 25px #000}.eyebrow{color:#ff526e;font-size:11px;font-weight:800;letter-spacing:3px}.hero h1{font-size:clamp(48px,7.5vw,108px);line-height:.98;letter-spacing:-4px;margin:22px 0}.hero p:not(.eyebrow){color:#d2d9e5;line-height:1.8}.cta{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:12px;letter-spacing:1.5px;padding:16px 22px;margin-top:25px}.cta:hover{background:#ff5474}.drivehud{position:absolute;z-index:2;right:5%;bottom:7%;display:flex;gap:18px;color:#e7ebf5;font:12px monospace;letter-spacing:2px}.scrollhint{position:absolute;z-index:2;left:8%;bottom:7%;color:#fff;font:11px monospace;letter-spacing:3px}.content{padding:110px 7%;min-height:60vh}.alt{background:#0e1828}.inner{max-width:1120px;margin:auto}.content h2{font-size:clamp(34px,5vw,68px);letter-spacing:-2px;margin:15px 0 30px}.content p{max-width:780px;color:var(--muted);line-height:1.9}.filters{display:flex;flex-wrap:wrap;gap:9px;margin:35px 0}.filters button{background:none;border:1px solid #364358;color:#c3cedb;padding:11px 13px;cursor:pointer;font-size:11px;letter-spacing:1px}.filters button.selected,.filters button:hover{background:var(--red);border-color:var(--red);color:#fff}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.cards article{border:1px solid #2a394c;background:linear-gradient(135deg,#1a2b40,#0b1423);padding:35px;min-height:215px}.cards article[hidden]{display:none}.cards span,.experience small{color:#ff657e;font-size:11px;letter-spacing:2px}.cards h3{font-size:23px}.experience{display:grid;gap:15px}.experience>div{border-left:2px solid var(--red);padding:10px 25px;background:#ffffff06}.experience h3{margin:10px 0 0}footer{text-align:center;padding:30px;color:#7e8ca1;font-size:11px;letter-spacing:2px}@media(max-width:700px){header{padding:0 4vw}nav{gap:10px}nav a{font-size:9px}.resume{display:none}.hero{left:6%;top:20%}.hero h1{letter-spacing:-2px}.cards{grid-template-columns:1fr}.drivehud{bottom:4%;right:5%;font-size:10px}.scrollhint{bottom:4%;left:5%;font-size:9px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root {
+    color-scheme:dark;
+    --red:#ff244d;
+    --bg:#080d18;
+    --ink:#f6f8ff;
+    --muted:#a4afc3
+}
 
-/* Car animation now drawn on canvas; no HUD or scroll prompt. */
+* {
+    box-sizing:border-box
+}
 
-/* Intro remains an empty road; vehicle cuts in once scrolling begins. */
+html {
+    scroll-behavior:smooth
+}
+
+body {
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Arial,Helvetica,sans-serif
+}
+
+header {
+    height:70px;
+    position:fixed;
+    z-index:30;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5vw;
+    background:linear-gradient(#050913ed,#05091375);
+    border-bottom:1px solid #ffffff19;
+    backdrop-filter:blur(12px)
+}
+
+a {
+    color:inherit;
+    text-decoration:none
+}
+
+.brand {
+    font-size:28px;
+    font-weight:900
+}
+
+.brand span,em,b {
+    color:var(--red);
+    font-style:normal
+}
+
+nav {
+    display:flex;
+    gap:25px
+}
+
+nav a,.resume {
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:700
+}
+
+nav a:hover {
+    color:var(--red)
+}
+
+.resume {
+    border:1px solid var(--red);
+    padding:10px 14px
+}
+
+.drive {
+    height:160vh;
+    position:relative
+}
+
+.stage {
+    height:100vh;
+    position:sticky;
+    top:0;
+    overflow:hidden;
+    background:#07101d
+}
+
+#scene {
+    width:100%;
+    height:100%;
+    display:block
+}
+
+.stage:after {
+    content:"";
+    pointer-events:none;
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,#030712ad 0%,#03071245 40%,transparent 75%),linear-gradient(0deg,#04071285,transparent 25%)
+}
+
+.hero {
+    position:absolute;
+    z-index:2;
+    left:8%;
+    top:27%;
+    max-width:600px;
+    text-shadow:0 3px 25px #000
+}
+
+.eyebrow {
+    color:#ff526e;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px
+}
+
+.hero h1 {
+    font-size:clamp(48px,7.5vw,108px);
+    line-height:.98;
+    letter-spacing:-4px;
+    margin:22px 0
+}
+
+.hero p:not(.eyebrow) {
+    color:#d2d9e5;
+    line-height:1.8
+}
+
+.cta {
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:1.5px;
+    padding:16px 22px;
+    margin-top:25px
+}
+
+.cta:hover {
+    background:#ff5474
+}
+
+.drivehud {
+    position:absolute;
+    z-index:2;
+    right:5%;
+    bottom:7%;
+    display:flex;
+    gap:18px;
+    color:#e7ebf5;
+    font:12px monospace;
+    letter-spacing:2px
+}
+
+.scrollhint {
+    position:absolute;
+    z-index:2;
+    left:8%;
+    bottom:7%;
+    color:#fff;
+    font:11px monospace;
+    letter-spacing:3px
+}
+
+.content {
+    padding:110px 7%;
+    min-height:60vh
+}
+
+.alt {
+    background:#0e1828
+}
+
+.inner {
+    max-width:1120px;
+    margin:auto
+}
+
+.content h2 {
+    font-size:clamp(34px,5vw,68px);
+    letter-spacing:-2px;
+    margin:15px 0 30px
+}
+
+.content p {
+    max-width:780px;
+    color:var(--muted);
+    line-height:1.9
+}
+
+.filters {
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin:35px 0
+}
+
+.filters button {
+    background:none;
+    border:1px solid #364358;
+    color:#c3cedb;
+    padding:11px 13px;
+    cursor:pointer;
+    font-size:11px;
+    letter-spacing:1px
+}
+
+.filters button.selected,.filters button:hover {
+    background:var(--red);
+    border-color:var(--red);
+    color:#fff
+}
+
+.cards {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px
+}
+
+.cards article {
+    border:1px solid #2a394c;
+    background:linear-gradient(135deg,#1a2b40,#0b1423);
+    padding:35px;
+    min-height:215px
+}
+
+.cards article[hidden] {
+    display:none
+}
+
+.cards span,.experience small {
+    color:#ff657e;
+    font-size:11px;
+    letter-spacing:2px
+}
+
+.cards h3 {
+    font-size:23px
+}
+
+.experience {
+    display:grid;
+    gap:15px
+}
+
+.experience>div {
+    border-left:2px solid var(--red);
+    padding:10px 25px;
+    background:#ffffff06
+}
+
+.experience h3 {
+    margin:10px 0 0
+}
+
+footer {
+    text-align:center;
+    padding:30px;
+    color:#7e8ca1;
+    font-size:11px;
+    letter-spacing:2px
+}
+
+@media(max-width:700px) {
+    header {
+        padding:0 4vw
+    }
+
+    nav {
+        gap:10px
+    }
+
+    nav a {
+        font-size:9px
+    }
+
+    .resume {
+        display:none
+    }
+
+    .hero {
+        left:6%;
+        top:20%
+    }
+
+    .hero h1 {
+        letter-spacing:-2px
+    }
+
+    .cards {
+        grid-template-columns:1fr
+    }
+
+    .drivehud {
+        bottom:4%;
+        right:5%;
+        font-size:10px
+    }
+
+    .scrollhint {
+        bottom:4%;
+        left:5%;
+        font-size:9px
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior:auto
+    }
+
+}
+
+/* Car animation now drawn on canvas;
+no HUD or scroll prompt. */
+
+/* Intro remains an empty road;
+vehicle cuts in once scrolling begins. */
