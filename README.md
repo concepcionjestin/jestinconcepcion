@@ -24,3 +24,6 @@ Open `index.html` in Chrome. The Canvas background and SVG asset work without an
 - Replace project summaries with your final validated project results. No contact email was guessed.
 
 This is a 2D racing-game aesthetic, not a fully modeled 3D driving simulation. The car and trails move along the same programmatic road path. It supports reverse scrolling and mobile screens.
+
+
+UPDATED: The sports car is now drawn directly in script.js, so no separate SVG is needed. The bottom scroll prompt and GR Supra HUD were removed. The car travels along the road as you scroll and leaves progressive red light trails.
