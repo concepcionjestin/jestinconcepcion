@@ -366,3 +366,81 @@ projectModal.addEventListener("click", event => {
         projectModal.close();
     }
 });
+
+/* =========================================
+   EXPERIENCE POP-UP CONTENT
+   ========================================= */
+
+const experienceData = {
+    realestate: {
+        dates: "2020 — PRESENT",
+        title: "Real Estate Agent",
+        company: "Professional Real Estate of Michigan",
+        overview: "Assist clients throughout real estate transactions, from evaluating market conditions to coordinating negotiations and documentation.",
+        details: [
+            "Analyze property information and local market conditions.",
+            "Communicate with clients and coordinate transaction milestones.",
+            "Support negotiations, paperwork, and closing preparation."
+        ]
+    },
+    tax: {
+        dates: "2018 — PRESENT",
+        title: "Tax Preparer",
+        company: "Tax Matters & Practitioner, LC",
+        overview: "Prepare individual federal and state tax returns, review financial information, and help clients navigate tax filing requirements.",
+        details: [
+            "Review and organize client financial documents.",
+            "Prepare federal and state income tax returns.",
+            "Apply tax rules and maintain accurate, confidential records."
+        ]
+    },
+    mortgage: {
+        dates: "2022 — PRESENT",
+        title: "Mortgage Loan Originator",
+        company: "Superb Mortgage",
+        overview: "Work with borrowers to assess financing needs, evaluate mortgage options, and coordinate loan documentation.",
+        details: [
+            "Review borrower financial and credit information.",
+            "Explain mortgage options and application requirements.",
+            "Coordinate documentation and support lending compliance."
+        ]
+    }
+};
+
+const experienceModal = document.getElementById("experienceModal");
+const closeExperienceModal = document.getElementById("closeExperienceModal");
+
+function openExperience(experienceId) {
+    const entry = experienceData[experienceId];
+    if (!entry || !experienceModal) return;
+
+    document.getElementById("experienceModalDates").textContent = entry.dates;
+    document.getElementById("experienceModalTitle").textContent = entry.title;
+    document.getElementById("experienceModalCompany").textContent = entry.company;
+    document.getElementById("experienceModalOverview").textContent = entry.overview;
+
+    const list = document.getElementById("experienceModalDetails");
+    list.replaceChildren();
+    entry.details.forEach(detail => {
+        const item = document.createElement("li");
+        item.textContent = detail;
+        list.appendChild(item);
+    });
+
+    experienceModal.showModal();
+}
+
+document.querySelectorAll("[data-experience]").forEach(card => {
+    card.addEventListener("click", () => openExperience(card.dataset.experience));
+    card.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openExperience(card.dataset.experience);
+        }
+    });
+});
+
+closeExperienceModal.addEventListener("click", () => experienceModal.close());
+experienceModal.addEventListener("click", event => {
+    if (event.target === experienceModal) experienceModal.close();
+});

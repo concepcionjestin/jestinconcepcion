@@ -523,3 +523,44 @@ footer {
 .modal-tags { display:flex; flex-wrap:wrap; gap:10px; }
 .modal-tags span { padding:9px 13px; background:#1a2b40; border:1px solid #364358; border-radius:4px; font-size:12px; }
 @media(max-width:700px) { .project-modal { padding:22px; max-height:90vh; } }
+
+
+/* =========================================
+   CLICKABLE EXPERIENCE CARDS
+   ========================================= */
+
+.experience-card {
+    cursor: pointer;
+    border: 1px solid #2a394c;
+    border-left: 3px solid var(--red);
+    border-radius: 4px;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, #1a2b40, #0b1423);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.experience-card:hover,
+.experience-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--red);
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+}
+
+.experience-card h3 {
+    font-size: 23px;
+    margin: 14px 0 4px;
+}
+
+.experience-card p {
+    margin: 0;
+}
+
+.experience-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#080d18">
     <title>Jestin Concepcion | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -110,12 +110,44 @@
                 <span class="eyebrow">03 / EXPERIENCE</span>
                 <h2>PROFESSIONAL <b>BACKGROUND.</b></h2>
                 <div class="experience">
-                    <div><small>2020 — PRESENT</small><h3>Real Estate Agent</h3><p>Professional Real Estate of Michigan</p></div>
-                    <div><small>2018 — PRESENT</small><h3>Tax Preparer</h3><p>Tax Matters &amp; Practitioner, LC</p></div>
-                    <div><small>2022 — PRESENT</small><h3>Mortgage Loan Originator</h3><p>Superb Mortgage</p></div>
+                    <article class="experience-card" data-experience="realestate" role="button" tabindex="0" aria-label="View Real Estate Agent experience">
+                        <small>2020 — PRESENT</small>
+                        <h3>Real Estate Agent</h3>
+                        <p>Professional Real Estate of Michigan</p>
+                        <span class="experience-more">VIEW EXPERIENCE ↗</span>
+                    </article>
+
+                    <article class="experience-card" data-experience="tax" role="button" tabindex="0" aria-label="View Tax Preparer experience">
+                        <small>2018 — PRESENT</small>
+                        <h3>Tax Preparer</h3>
+                        <p>Tax Matters &amp; Practitioner, LC</p>
+                        <span class="experience-more">VIEW EXPERIENCE ↗</span>
+                    </article>
+
+                    <article class="experience-card" data-experience="mortgage" role="button" tabindex="0" aria-label="View Mortgage Loan Originator experience">
+                        <small>2022 — PRESENT</small>
+                        <h3>Mortgage Loan Originator</h3>
+                        <p>Superb Mortgage</p>
+                        <span class="experience-more">VIEW EXPERIENCE ↗</span>
+                    </article>
                 </div>
             </div>
         </section>
+
+        <!-- EXPERIENCE POP-UP -->
+        <dialog id="experienceModal" class="project-modal" aria-labelledby="experienceModalTitle">
+            <button type="button" class="modal-close" id="closeExperienceModal" aria-label="Close experience details">&times;</button>
+            <div class="modal-content">
+                <span class="eyebrow" id="experienceModalDates"></span>
+                <h2 id="experienceModalTitle"></h2>
+                <p class="modal-intro" id="experienceModalCompany"></p>
+                <div class="modal-divider"></div>
+                <h3>ROLE OVERVIEW</h3>
+                <p id="experienceModalOverview"></p>
+                <h3>RESPONSIBILITIES</h3>
+                <ul id="experienceModalDetails"></ul>
+            </div>
+        </dialog>
 
         <!-- CONTACT -->
         <section id="contact" class="content alt">
@@ -128,6 +160,6 @@
         </section>
     </main>
     <footer>© <span id="year"></span> The End?</footer>
-    <script src="script.js?v=4" defer></script>
+    <script src="script.js?v=5" defer></script>
 </body>
 </html>
