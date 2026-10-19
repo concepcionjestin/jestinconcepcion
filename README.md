@@ -1,11 +1,20 @@
-# Performance Coupe Portfolio — Scroll-to-Enter Edition
+# Opposing light trails portfolio
 
-A generic, unbranded high-performance coupe now **cuts in only after scrolling begins**. At the top of the page the road is empty. Around 5% into the scroll the car enters from the bottom-left and merges onto the road; then it drives into the distance. Red trails grow only once it starts traveling down the road.
+No car or external car image is used. The road is procedurally drawn in the HTML canvas.
 
-## Install on GitHub Pages
-Upload `index.html`, `style.css`, and `script.js` to the **root** of your repository and commit them. These three files are all that is needed for the animated scene. Your other portfolio sections are preserved. No car image is required.
+- Red twin light trails travel from the bottom toward the top **to the right of the yellow dashed center line**.
+- White twin light trails travel from the top toward the bottom **to the left of the yellow dashed center line**.
+- Both start hidden and extend in opposite directions as you scroll; scrolling up retracts them.
+- About, Projects, Experience, and Contact sections remain in place.
 
-The `assets` directory is optional and can hold your own `resume.pdf`.
+## GitHub upload
+1. Extract this ZIP.
+2. Open https://github.com/concepcionjestin/jestinconcepcion
+3. Upload `index.html`, `style.css`, and `script.js` into the **repository root**, replacing the previous files. Keep the names exactly.
+4. Commit to `main` and wait for GitHub Pages to deploy.
+5. Hard-refresh the site with Cmd+Shift+R.
 
-## Customize
-In `script.js`, `progress<=.045` controls when the car first appears; `(progress-.045)/.15` controls how quickly it cuts in; `(progress-.16)/.84` controls its drive away. The animation is intentionally stylized Canvas 2D, not a photorealistic 3D render.
+The `assets` directory is optional; upload your own `assets/resume.pdf` to enable the résumé link.
+
+## Troubleshooting
+If you see a static scene, verify that `script.js` is in the same folder as `index.html`. In browser developer tools, check the Console for JavaScript errors. The effect is tied to scrolling over the tall homepage section.
