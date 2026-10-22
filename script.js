@@ -268,30 +268,89 @@ const projectData = {
     headlight: {
         category: "04 / AUTOMOTIVE OPTICS",
         title: "Adaptive Headlight System",
-        intro: "Adaptive automotive illumination using tunable optics.",
+        intro: "Zemax modeling concept inspired by the Toyota Supra’s six headlight beams.",
 
         overview:
-            "Concept for an automotive headlight system " +
-            "that adjusts its illumination pattern using " +
-            "selective light control and tunable optical " +
-            "elements. The goal is to explore how lighting " +
-            "can adapt to different driving conditions.",
+            "Optical design concept to recreate the Toyota Supra’s " +
+            "headlight arrangement in Zemax, with three projected " +
+            "beams from each side. The proposed model would provide " +
+            "a starting point for evaluating beam direction, " +
+            "overlap, and adaptive illumination ideas.",
 
         details: [
-            "Adaptive beam pattern design",
-            "Selective illumination control",
-            "Tunable lens integration",
-            "Optical system modeling considerations",
-            "Automotive lighting applications"
+            "Three beams per headlight assembly (six total)",
+            "Zemax optical system layout and ray tracing",
+            "Beam projection and overlap considerations",
+            "Potential extension to adaptive illumination",
+            "Concept / proposed model; no simulated results presented"
         ],
 
         tags: [
             "Automotive",
             "Optics",
             "Adaptive Lighting",
-            "Tunable Lenses",
+            "Zemax",
+            "Ray Tracing",
             "Optical Design"
         ]
+    },
+
+    compression: {
+        category: "05 / SIGNAL PROCESSING",
+        title: "Image Compression",
+        intro: "Designed and evaluated a custom lossy image compression codec for 16-bit images.",
+        overview: "Developed a JPEG-inspired compression pipeline combining DCT-based spatial decorrelation, SVD/PCA-based color decorrelation, quantization, DPCM, and entropy coding. Benchmarked three codec variants against rate-matched JPEG using 14 test images and measured the tradeoff between file size and reconstructed image quality.",
+        details: [
+            "Applied 8×8 Discrete Cosine Transform (DCT) processing and SVD/PCA-based color decorrelation",
+            "Used quantization and differential pulse-code modulation (DPCM) to reduce redundant image data",
+            "Explored Huffman and Asymmetric Numeral Systems (ANS) entropy encoding in multiple codec variants",
+            "Achieved an average compression ratio of approximately 100:1 with the hybrid Huffman codec across 14 test images",
+            "Compared reconstructed image fidelity against size-matched JPEG using PSNR and SSIM; identified opportunities to improve encoding efficiency"
+        ],
+        tags: ["Signal Processing", "DCT", "SVD / PCA", "DPCM", "Huffman", "ANS", "PSNR", "SSIM"],
+        website: "https://tdvalencia.github.io/image-compression/index.html"
+    },
+
+    cloaking: {
+        category: "06 / OPTICS",
+        title: "Optical Cloaking",
+        intro: "EECS 334 project exploring light redirection and concealment.",
+        overview: "Optics project focused on the principles of optical cloaking: manipulating the paths of light rays so an object may be concealed from an observer.",
+        details: [
+            "Geometrical optics and ray propagation",
+            "Light redirection and optical path design",
+            "Conceptual evaluation of the cloaking arrangement",
+            "Relationship between observer viewpoint and apparent visibility"
+        ],
+        tags: ["EECS 334", "Geometrical Optics", "Ray Tracing", "Optical Cloaking"]
+    },
+
+    simon: {
+        category: "07 / EMBEDDED SYSTEMS",
+        title: "Arduino Simon Says",
+        intro: "Microcontroller-based interactive sequence memory game.",
+        overview: "Arduino Simon Says project centered on generating light sequences, accepting player responses, and checking input against the programmed sequence.",
+        details: [
+            "Arduino microcontroller programming",
+            "LED output and user input",
+            "Sequence generation and comparison logic",
+            "Game progression and feedback"
+        ],
+        tags: ["Arduino", "Embedded Programming", "LEDs", "Digital I/O"]
+    },
+
+    discs: {
+        category: "08 / PHYSICS RESEARCH",
+        title: "Disc Profile Physics Research",
+        intro: "High school research examining discs with varying profiles.",
+        overview: "High school physics research project investigating how changes in a disc's physical profile influence its behavior, with an emphasis on experimental comparison.",
+        details: [
+            "Comparison of differently profiled discs",
+            "Experimental design and controlled observations",
+            "Collection and interpretation of physics measurements",
+            "Analysis of geometry-related differences"
+        ],
+        tags: ["Physics", "Experimental Research", "Data Analysis", "Disc Geometry"]
     }
 };
 
@@ -336,6 +395,11 @@ function openProject(projectId) {
         element.textContent = tag;
         tagsContainer.appendChild(element);
     });
+
+    const projectLinkWrap = document.getElementById("modalProjectLinkWrap");
+    const projectLink = document.getElementById("modalProjectLink");
+    projectLinkWrap.style.display = project.website ? "block" : "none";
+    if (project.website) projectLink.href = project.website;
 
     projectModal.showModal();
 }

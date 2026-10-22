@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#080d18">
     <title>Jestin Concepcion | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -59,6 +59,8 @@
                     <button data-filter="optics" type="button">OPTICS</button>
                     <button data-filter="automotive" type="button">AUTOMOTIVE</button>
                     <button data-filter="semiconductor" type="button">SEMICONDUCTORS</button>
+                    <button data-filter="signal" type="button">SIGNAL PROCESSING</button>
+                    <button data-filter="research" type="button">RESEARCH</button>
                 </div>
                 <div class="cards">
                     <article data-tags="embedded" data-project="thermal" tabindex="0" role="button" aria-label="View Thermal Occupancy Detection details">
@@ -82,7 +84,31 @@
                     <article data-tags="automotive optics" data-project="headlight" tabindex="0" role="button" aria-label="View Adaptive Headlight System details">
                         <span>04 / AUTOMOTIVE OPTICS</span>
                         <h3>Adaptive Headlight System</h3>
-                        <p>Concept combining selective illumination and tunable optics for automotive lighting.</p>
+                        <p>Zemax optical modeling concept recreating three headlight beams on each side of a Toyota Supra.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="signal" data-project="compression" tabindex="0" role="button" aria-label="View Image Compression details">
+                        <span>05 / SIGNAL PROCESSING</span>
+                        <h3>Image Compression</h3>
+                        <p>Developed and benchmarked a custom 16-bit lossy image codec using DCT, SVD/PCA, quantization, and entropy coding.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="optics" data-project="cloaking" tabindex="0" role="button" aria-label="View Optical Cloaking details">
+                        <span>06 / OPTICS</span>
+                        <h3>Optical Cloaking</h3>
+                        <p>EECS 334 optical cloaking project exploring how light can be redirected to conceal an object from view.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="embedded" data-project="simon" tabindex="0" role="button" aria-label="View Arduino Simon Says details">
+                        <span>07 / EMBEDDED SYSTEMS</span>
+                        <h3>Arduino Simon Says</h3>
+                        <p>Arduino-based memory game using programmed light sequences and player input.</p>
+                        <div class="project-more">VIEW PROJECT ↗</div>
+                    </article>
+                    <article data-tags="research" data-project="discs" tabindex="0" role="button" aria-label="View Disc Profile Physics Research details">
+                        <span>08 / PHYSICS RESEARCH</span>
+                        <h3>Disc Profile Physics Research</h3>
+                        <p>High school physics research investigating the behavior of discs with different profiles.</p>
                         <div class="project-more">VIEW PROJECT ↗</div>
                     </article>
                 </div>
@@ -103,6 +129,7 @@
                 <ul id="modalDetails"></ul>
                 <h3>TOOLS &amp; TECHNOLOGIES</h3>
                 <div class="modal-tags" id="modalTags"></div>
+                <p id="modalProjectLinkWrap" style="display:none; margin-top:24px"><a id="modalProjectLink" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; font-weight:700" href="#">VIEW PROJECT WEBSITE ↗</a></p>
             </div>
         </dialog>
 
@@ -162,6 +189,6 @@
         </section>
     </main>
     <footer>© <span id="year"></span> The End?</footer>
-    <script src="script.js?v=5" defer></script>
+    <script src="script.js?v=6" defer></script>
 </body>
 </html>
