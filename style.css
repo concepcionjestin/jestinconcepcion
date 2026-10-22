@@ -592,3 +592,11 @@ footer {
 .real-estate-gallery img { transition: transform .18s ease, border-color .18s ease; }
 .real-estate-gallery a:hover img { transform: scale(1.015); border-color: var(--red); }
 .real-estate-gallery .gallery-helper { margin: 2px 0 12px; font-size: 13px; }
+
+/* Real estate gallery: show whole photos without horizontal clipping or cropping */
+#experienceModal { box-sizing: border-box; max-width: min(850px, 94vw); overflow-x: hidden; }
+#experienceModal .modal-content, #experienceModal .real-estate-gallery { box-sizing: border-box; width: 100%; min-width: 0; max-width: 100%; }
+#experienceModal .real-estate-gallery-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; width: 100%; max-width: 100%; }
+#experienceModal .real-estate-gallery figure, #experienceModal .real-estate-gallery a { min-width: 0; width: 100%; max-width: 100%; }
+#experienceModal .real-estate-gallery img { display: block; width: 100%; max-width: 100%; height: auto; max-height: none; object-fit: contain; box-sizing: border-box; transform: none; }
+#experienceModal .real-estate-gallery a:hover img { transform: none; border-color: var(--red); }
