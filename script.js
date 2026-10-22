@@ -213,28 +213,31 @@ const projectData = {
     solar: {
         category: "02 / OPTOELECTRONICS",
         title: "Kesterite Solar Cell Research",
-        intro: "Exploration of semiconductor photovoltaic technologies.",
+        intro: "Research proposal investigating quantum-engineered kesterite solar cells.",
 
         overview:
-            "Research into kesterite-based photovoltaic devices, " +
-            "with emphasis on improving solar cell performance " +
-            "and understanding limitations associated with " +
-            "open-circuit voltage deficits and device stability.",
+            "Proposed investigating quantum dots and quantum wells in kesterite-based " +
+            "photovoltaic devices to improve energy conversion efficiency. " +
+            "The research examines opportunities to address open-circuit voltage " +
+            "deficits, carrier recombination, and material stability.",
 
         details: [
-            "Semiconductor device physics",
-            "Photovoltaic energy conversion",
-            "Open-circuit voltage limitations",
-            "Material defects and recombination",
-            "Device stability considerations"
+            "Proposed integration of quantum dots and quantum wells",
+            "Kesterite semiconductor materials and photovoltaic device physics",
+            "Open-circuit voltage deficits and recombination losses",
+            "Potential efficiency improvements through quantum engineering",
+            "Research proposal; performance improvements not yet experimentally demonstrated"
         ],
 
         tags: [
             "Semiconductors",
             "Photovoltaics",
-            "Optoelectronics",
-            "Device Physics"
-        ]
+            "Quantum Dots",
+            "Quantum Wells",
+            "Optoelectronics"
+        ],
+        website: "https://docs.google.com/document/d/1vdd4ynXJqURbMEd8OPiyy8fb02sUrtF-/edit?usp=sharing&ouid=111964794422243907180&rtpof=true&sd=true",
+        websiteLabel: "VIEW KESTERITE RESEARCH PROPOSAL ↗"
     },
 
     glove: {
