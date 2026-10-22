@@ -564,3 +564,24 @@ footer {
     font-weight: 800;
     letter-spacing: 1.5px;
 }
+
+/* Real estate experience gallery */
+.real-estate-gallery[hidden] { display: none !important; }
+.real-estate-gallery { margin-top: 30px; }
+.real-estate-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.real-estate-gallery figure { margin: 0; min-width: 0; }
+.real-estate-gallery img { width: 100%; height: 260px; object-fit: cover; border-radius: 8px; border: 1px solid #364358; display: block; }
+.real-estate-gallery figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }
+@media (max-width: 600px) { .real-estate-gallery-grid { grid-template-columns: 1fr; } .real-estate-gallery img { height: 280px; } }
+
+/* =========================================
+   RELEVANT COURSEWORK
+   ========================================= */
+.coursework-intro { color: var(--muted); max-width: 680px; line-height: 1.7; margin: 0 0 32px; }
+.course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.course-card { padding: 26px 24px; border: 1px solid #2a394c; border-radius: 5px; background: linear-gradient(135deg, #152439, #0b1423); min-width: 0; }
+.course-code { color: var(--red); font-weight: 800; font-size: 13px; letter-spacing: 1.3px; }
+.course-card h3 { font-size: 19px; line-height: 1.35; margin: 13px 0 12px; color: var(--ink); }
+.course-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 14px; }
+@media (max-width: 1050px) { .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 650px) { .course-grid { grid-template-columns: 1fr; } .course-card { padding: 22px; } }

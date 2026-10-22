@@ -502,6 +502,8 @@ function openExperience(experienceId) {
         list.appendChild(item);
     });
 
+    document.getElementById("realEstateGallery").hidden = experienceId !== "realestate";
+
     experienceModal.showModal();
 }
 

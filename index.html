@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#080d18">
     <title>Jestin Concepcion | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -14,6 +14,7 @@
         <nav aria-label="Main navigation">
             <a href="#about">ABOUT</a>
             <a href="#projects">PROJECTS</a>
+            <a href="#coursework">COURSEWORK</a>
             <a href="#experience">EXPERIENCE</a>
             <a href="#contact">CONTACT</a>
         </nav>
@@ -133,10 +134,30 @@
             </div>
         </dialog>
 
+        <!-- RELEVANT COURSEWORK -->
+        <section id="coursework" class="content alt">
+            <div class="inner">
+                <span class="eyebrow">03 / RELEVANT COURSEWORK</span>
+                <h2>ACADEMIC <b>FOUNDATIONS.</b></h2>
+                <p class="coursework-intro">Selected electrical engineering coursework at the University of Michigan.</p>
+                <div class="course-grid">
+                    <article class="course-card"><span class="course-code">EECS 215</span><h3>Introduction to Electronic Circuits</h3><p>Circuit analysis, operational amplifiers, diodes, transistors, RLC circuits, and filters.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 230</span><h3>Engineering Electromagnetics</h3><p>Electrostatics, magnetostatics, Maxwell’s equations, electromagnetic waves, and transmission lines.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 216</span><h3>Introduction to Signals and Systems</h3><p>Fourier and Laplace transforms, convolution, sampling, frequency response, and system stability.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 320</span><h3>Introduction to Semiconductor Devices</h3><p>Carrier transport, PN junctions, photodetectors, BJTs, and MOSFETs.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 429</span><h3>Semiconductor Optoelectronic Devices</h3><p>Optical processes in semiconductors, LEDs, lasers, photodetectors, and solar cells.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 428</span><h3>Introduction to Quantum Nanotechnology</h3><p>Quantum mechanics, resonant tunneling, quantum circuits, and nanoscale devices.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 351</span><h3>Introduction to Digital Signal Processing</h3><p>FFT, digital filters, z-transforms, spectrograms, image processing, and signal reconstruction.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 300</span><h3>Electrical Engineering Systems Design II</h3><p>Embedded systems, sensing, power tradeoffs, integration, and engineering design.</p></article>
+                    <article class="course-card"><span class="course-code">EECS 280</span><h3>Programming and Introductory Data Structures</h3><p>C++ programming, algorithms, recursion, pointers, linked structures, and trees.</p></article>
+                </div>
+            </div>
+        </section>
+
         <!-- EXPERIENCE -->
         <section id="experience" class="content">
             <div class="inner">
-                <span class="eyebrow">03 / EXPERIENCE</span>
+                <span class="eyebrow">04 / EXPERIENCE</span>
                 <h2>PROFESSIONAL <b>BACKGROUND.</b></h2>
                 <div class="experience">
                     <article class="experience-card" data-experience="realestate" role="button" tabindex="0" aria-label="View Real Estate Agent experience">
@@ -175,13 +196,20 @@
                 <p id="experienceModalOverview"></p>
                 <h3>RESPONSIBILITIES</h3>
                 <ul id="experienceModalDetails"></ul>
+                <div id="realEstateGallery" class="real-estate-gallery" hidden aria-label="Real estate property photos">
+                    <h3>PROPERTY GALLERY</h3>
+                    <div class="real-estate-gallery-grid">
+                        <figure><img src="images/real-estate-construction.jpg" alt="Two-story home during exterior construction" loading="lazy"><figcaption>During construction</figcaption></figure>
+                        <figure><img src="images/real-estate-completed.jpg" alt="Completed two-story home with dark exterior and white garage door" loading="lazy"><figcaption>Completed exterior</figcaption></figure>
+                    </div>
+                </div>
             </div>
         </dialog>
 
         <!-- CONTACT -->
         <section id="contact" class="content alt">
             <div class="inner">
-                <span class="eyebrow">04 / CONTACT</span>
+                <span class="eyebrow">05 / CONTACT</span>
                 <h2>LET'S <b>CONNECT.</b></h2>
                 <p>Interested in connecting or learning more?</p>
                 <a class="cta" href="https://www.linkedin.com/in/jestin-concepcion-11b142268/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
