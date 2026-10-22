@@ -322,7 +322,9 @@ const projectData = {
             "Conceptual evaluation of the cloaking arrangement",
             "Relationship between observer viewpoint and apparent visibility"
         ],
-        tags: ["EECS 334", "Geometrical Optics", "Ray Tracing", "Optical Cloaking"]
+        tags: ["EECS 334", "Geometrical Optics", "Ray Tracing", "Optical Cloaking"],
+        website: "https://www.youtube.com/watch?v=VUiCAupWPpk",
+        websiteLabel: "WATCH OPTICAL CLOAKING VIDEO ↗"
     },
 
     simon: {
@@ -343,14 +345,17 @@ const projectData = {
         category: "08 / PHYSICS RESEARCH",
         title: "Disc Profile Physics Research",
         intro: "High school research examining discs with varying profiles.",
-        overview: "High school physics research project investigating how changes in a disc's physical profile influence its behavior, with an emphasis on experimental comparison.",
+        overview: "Awarded first place at a high school physics science fair for research investigating how changes in a disc's physical profile influence its behavior through experimental comparison.",
         details: [
             "Comparison of differently profiled discs",
             "Experimental design and controlled observations",
             "Collection and interpretation of physics measurements",
-            "Analysis of geometry-related differences"
+            "Analysis of geometry-related differences",
+            "First-place award at the high school physics science fair"
         ],
-        tags: ["Physics", "Experimental Research", "Data Analysis", "Disc Geometry"]
+        tags: ["Physics", "Experimental Research", "Data Analysis", "Disc Geometry"],
+        website: "https://docs.google.com/document/d/1NFepa0XR-WLPNki9HPz51zXh6u1ldYvGm65Jo57Js-Q/edit?usp=sharing",
+        websiteLabel: "VIEW PHYSICS RESEARCH DOCUMENT ↗"
     }
 };
 
@@ -399,7 +404,10 @@ function openProject(projectId) {
     const projectLinkWrap = document.getElementById("modalProjectLinkWrap");
     const projectLink = document.getElementById("modalProjectLink");
     projectLinkWrap.style.display = project.website ? "block" : "none";
-    if (project.website) projectLink.href = project.website;
+    if (project.website) {
+        projectLink.href = project.website;
+        projectLink.textContent = project.websiteLabel || "VIEW PROJECT WEBSITE ↗";
+    }
 
     projectModal.showModal();
 }
