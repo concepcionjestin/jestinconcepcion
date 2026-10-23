@@ -600,3 +600,7 @@ footer {
 #experienceModal .real-estate-gallery figure, #experienceModal .real-estate-gallery a { min-width: 0; width: 100%; max-width: 100%; }
 #experienceModal .real-estate-gallery img { display: block; width: 100%; max-width: 100%; height: auto; max-height: none; object-fit: contain; box-sizing: border-box; transform: none; }
 #experienceModal .real-estate-gallery a:hover img { transform: none; border-color: var(--red); }
+
+/* Linked course media */
+.course-video-link { display: inline-block; margin-top: 15px; color: #8dbbff; font-size: 12px; font-weight: 700; letter-spacing: .09em; text-decoration: none; }
+.course-video-link:hover, .course-video-link:focus-visible { color: #ffffff; text-decoration: underline; }
